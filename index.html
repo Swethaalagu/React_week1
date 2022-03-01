@@ -1,0 +1,16 @@
+<script>
+   function wordFrequency(string) {
+    var words =string.toLowerCase();
+    var words = string.replace(/[.]/g, '').split(/\s/);
+    console.log(words.length);
+    let freqMap = {};
+    words.map( x=> {
+        if (!freqMap[x]) {
+            freqMap[x] = 0;
+        }
+        freqMap[x] += 1;
+    }); 
+ return freqMap;
+ }
+console.log(wordFrequency("He never looks for praises.He's never one to boast.He just goes on quietly working For these he loves the most.His dreams are seldom spoken.His wants are very few,And most of the time his worriesWill go unspoken, too.He's there...a firm foundationThrough all our storms of life,A sturdy hand to hold ontoIn times of stress and strife.A true friend we can turn toWhen times are good or bad.One of our greatest blessings,The man that we call Dad"));
+</script>
